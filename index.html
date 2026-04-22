@@ -1,10 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="bn">
 <head>
-    <title>Public Report Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পাবলিক রিপোর্ট ওয়েবসাইট</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 { color: #333; font-size: 24px; }
+        p { color: #666; margin-bottom: 20px; }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box; /* padding ঠিক রাখার জন্য */
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover { background-color: #0056b3; }
+    </style>
 </head>
 <body>
+
+<div class="container">
     <h1>স্বাগতম আমাদের পাবলিক রিপোর্ট ওয়েবসাইটে</h1>
-    <p>আপনার রিপোর্ট এখানে জমা দিন।</p>
+    <p>নিচের ফর্মে আপনার রিপোর্টটি লিখে জমা দিন।</p>
+    
+    <form>
+        <input type="text" placeholder="আপনার নাম" required>
+        <input type="email" placeholder="আপনার ইমেইল (ঐচ্ছিক)">
+        <textarea placeholder="এখানে আপনার রিপোর্ট লিখুন..." rows="5" required></textarea>
+        <button type="button" onclick="alert('ধন্যবাদ! আপনার রিপোর্টটি গ্রহণ করা হয়েছে।')">জমা দিন</button>
+    </form>
+</div>
+
 </body>
 </html>
