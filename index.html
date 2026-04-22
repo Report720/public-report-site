@@ -3,138 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElectroBazar - রিপোর্ট পোর্টাল</title>
+    <title>AI Report Portal | Professional</title>
     <style>
+        /* ১. গ্লোবাল স্টাইল ও AI ব্যাকগ্রাউন্ড */
         body {
             margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 100%);
+            color: #ffffff;
+            scroll-behavior: smooth;
         }
 
-        /* ১. নীল অ্যানাউন্সমেন্ট বার */
+        /* ২. অ্যানাউন্সমেন্ট বার */
         .top-bar {
-            background-color: #1a73e8;
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
             color: white;
             padding: 10px;
             text-align: center;
-            font-weight: bold;
             font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
 
-        /* ২. ন্যাভিগেশন বার */
+        /* ৩. প্রফেশনাল ন্যাভিগেশন বার */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: white;
-            padding: 15px 5%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            padding: 15px 8%;
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
+        .logo { font-size: 24px; font-weight: bold; color: #00d2ff; text-transform: uppercase; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 25px; transition: 0.3s; }
+        .nav-links a:hover { color: #00d2ff; }
 
-        .logo-area { display: flex; align-items: center; }
-        .logo-icon { 
-            width: 40px; height: 40px; 
-            background: #4b0082; color: white; 
-            border-radius: 8px; display: flex; 
-            justify-content: center; align-items: center;
-            margin-right: 10px; font-weight: bold;
-        }
-        .brand-text h3 { margin: 0; font-size: 18px; color: #4b0082; }
-        .brand-text span { font-size: 11px; color: #777; }
-
-        .nav-links a { text-decoration: none; color: #333; margin-left: 20px; font-weight: 500; }
-
-        /* ৩. ফর্ম সেকশন (মাঝের অংশ) */
-        .main-content {
-            padding: 50px 20px;
+        /* ৪. হিরো সেকশন (AI লুক) */
+        .hero {
+            height: 60vh;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
+            text-align: center;
+            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
         }
+        .hero h1 { font-size: 45px; margin-bottom: 10px; background: linear-gradient(to right, #fff, #00d2ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        .report-card {
-            background: white;
+        /* ৫. রিপোর্ট ফর্ম সেকশন */
+        .form-section {
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.07);
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            max-width: 500px;
             width: 100%;
-            text-align: center;
+            max-width: 500px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
-
         input, textarea {
-            width: 100%; padding: 12px; margin: 10px 0;
-            border: 1px solid #ddd; border-radius: 10px;
-            box-sizing: border-box;
+            width: 100%; padding: 15px; margin: 12px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px; color: white; outline: none; box-sizing: border-box;
         }
-
-        .btn-submit {
-            background: #1a73e8; color: white; border: none;
-            padding: 15px; width: 100%; border-radius: 10px;
-            font-weight: bold; cursor: pointer; transition: 0.3s;
+        input:focus, textarea:focus { border-color: #00d2ff; }
+        .submit-btn {
+            width: 100%; padding: 15px; background: #00d2ff;
+            border: none; border-radius: 10px; color: #1a1a2e;
+            font-weight: bold; cursor: pointer; font-size: 16px; transition: 0.4s;
         }
+        .submit-btn:hover { background: #fff; transform: translateY(-3px); }
 
-        .btn-submit:hover { background: #1557b0; }
-
-        /* ৪. নিচের অংশ (Footer) - যা সাইটকে লম্বা করবে */
-        .extra-section {
-            background: #fff;
-            padding: 60px 5%;
-            margin-top: 40px;
+        /* ৬. কন্টাক্ট আস ও ফিচার সেকশন (স্ক্রল করার জন্য) */
+        .info-section {
+            padding: 100px 10% ;
+            background: rgba(255, 255, 255, 0.02);
             text-align: center;
         }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px; margin-top: 50px;
+        }
+        .contact-item {
+            padding: 30px; background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px; border: 1px solid rgba(0, 210, 255, 0.2);
+        }
 
+        /* ৭. ফুটার */
         footer {
-            background: #333; color: white;
-            padding: 20px; text-align: center;
-            font-size: 14px;
+            padding: 50px; text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #777;
         }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        নিশ্চিন্তে ব্যবহার করুন—আমরা দিচ্ছি পুরো ২ বছরের রিপ্লেসমেন্ট গ্যারান্টি।
-    </div>
+    <div class="top-bar">AI ভিত্তিক স্মার্ট রিপোর্ট সিস্টেম — দ্রুত ও নিরাপদ</div>
 
     <nav class="navbar">
-        <div class="logo-area">
-            <div class="logo-icon">E</div>
-            <div class="brand-text">
-                <h3>ElectroBazar</h3>
-                <span>Premium Shopping Experience</span>
-            </div>
-        </div>
+        <div class="logo">AI-PORTAL</div>
         <div class="nav-links">
-            <a href="#">Products</a>
-            <a href="#">About Us</a>
+            <a href="#home">Home</a>
+            <a href="#report">Report</a>
+            <a href="#contact">Contact Us</a>
         </div>
     </nav>
 
-    <div class="main-content">
-        <div class="report-card">
-            <h2>পাবলিক রিপোর্ট ফর্ম</h2>
-            <p>আপনার তথ্য আমাদের কাছে সুরক্ষিত।</p>
+    <div class="hero" id="home">
+        <h1>Next-Gen Reporting System</h1>
+        <p>আপনার অভিযোগ বা রিপোর্ট এখন হবে আরও আধুনিক।</p>
+    </div>
+
+    <section class="form-section" id="report">
+        <div class="glass-card">
+            <h2 style="text-align: center; color: #00d2ff;">রিপোর্ট সাবমিট করুন</h2>
             <form action="https://formspree.io/f/YOUR_EMAIL_HERE" method="POST">
-                <input type="text" name="Name" placeholder="আপনার নাম" required>
-                <input type="email" name="Email" placeholder="ইমেইল অ্যাড্রেস" required>
-                <textarea name="Message" rows="5" placeholder="রিপোর্ট বিস্তারিত লিখুন..." required></textarea>
-                <button type="submit" class="btn-submit">জমা দিন</button>
+                <input type="text" name="name" placeholder="আপনার নাম" required>
+                <input type="email" name="email" placeholder="ইমেইল অ্যাড্রেস" required>
+                <textarea name="message" rows="5" placeholder="বিস্তারিত লিখুন..." required></textarea>
+                <button type="submit" class="submit-btn">জমা দিন (Submit)</button>
             </form>
         </div>
-    </div>
+    </section>
 
-    <div class="extra-section">
-        <h2>আমাদের সেবা সম্পর্কে জানুন</h2>
-        <p>আমরা ২৪/৭ কাস্টমার সাপোর্ট প্রদান করি। আপনার যেকোনো সমস্যায় আমরা পাশে আছি।</p>
-    </div>
+    <section class="info-section" id="contact">
+        <h2>Contact Us</h2>
+        <p>আমাদের সাথে যোগাযোগ করার উপায়</p>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>📍 অবস্থান</h3>
+                <p>ঢাকা, বাংলাদেশ</p>
+            </div>
+            <div class="contact-item">
+                <h3>📧 ইমেইল</h3>
+                <p>support@aiportal.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>📞 ফোন</h3>
+                <p>+৮৮০ ১২৩৪-৫৬৭৮৯০</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        © ২০২৬ ElectroBazar | সর্বস্বত্ব সংরক্ষিত।
+        <p>© ২০২৬ AI-Portal | Powered by Future Tech</p>
     </footer>
 
 </body>
