@@ -3,108 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>রিপোর্ট ওয়েব | প্রফেশনাল পোর্টাল</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <title>রিপোর্ট ওয়েব</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* ১. গ্লোবাল লাইট স্টাইল */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background-color: #ffffff !important;
-            color: #333;
-            scroll-behavior: smooth;
-        }
-
-        /* ২. টপ বার */
-        .top-bar {
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        /* ৩. ন্যাভিগেশন বার */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #fff;
-            padding: 15px 8%;
-            border-bottom: 1px solid #eee;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .logo { font-size: 22px; font-weight: bold; color: #333; text-decoration: none; }
-        .logo span { color: #007bff; }
-        .nav-links a { color: #555; text-decoration: none; margin-left: 20px; font-weight: 500; }
-
-        /* ৪. মেইন কন্টেন্ট */
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .report-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid #ddd;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        /* ৫. ফর্ম এলিমেন্ট স্টাইল */
-        label { display: block; margin-top: 15px; font-weight: bold; font-size: 14px; }
-        input, select, textarea {
-            width: 100%; padding: 12px; margin-top: 5px;
-            border: 1px solid #ccc; border-radius: 8px;
-            box-sizing: border-box; font-size: 15px;
-        }
-        input[type="file"] { padding: 10px; background: #f8f9fa; cursor: pointer; }
-
-        .submit-btn {
-            width: 100%; padding: 15px; background: #007bff;
-            color: white; border: none; border-radius: 8px;
-            font-weight: bold; cursor: pointer; font-size: 16px;
-            margin-top: 20px; transition: 0.3s;
-        }
-        .submit-btn:hover { background: #0056b3; }
-
-        /* ৬. কন্টাক্ট ও সোশ্যাল মিডিয়া */
-        .contact-section {
-            background: #f9f9f9; padding: 60px 20px; text-align: center;
-        }
-        .contact-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
-        .contact-box { padding: 20px; background: white; border: 1px solid #eee; border-radius: 10px; width: 220px; }
-
-        .social-links { margin-top: 30px; }
-        .social-links a {
-            font-size: 28px; margin: 0 15px; color: #555; transition: 0.3s; text-decoration: none;
-        }
-        .fa-facebook:hover { color: #1877f2; }
-        .fa-x-twitter:hover { color: #000; }
-
-        /* ৭. হোয়াটসঅ্যাপ ফ্লোটিং বাটন */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            color: white;
-            width: 60px; height: 60px;
-            border-radius: 50%;
-            display: flex; justify-content: center; align-items: center;
-            font-size: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            text-decoration: none;
-            z-index: 1000;
-        }
-
-        footer { padding: 30px; text-align: center; color: #999; font-size: 14px; border-top: 1px solid #eee; }
+        body { margin: 0; font-family: sans-serif; background-color: #ffffff; color: #333; }
+        .top-bar { background: #007bff; color: white; padding: 10px; text-align: center; font-weight: bold; }
+        .navbar { display: flex; justify-content: space-between; padding: 15px 5%; border-bottom: 1px solid #eee; }
+        .container { max-width: 500px; margin: 40px auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .submit-btn { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .social-links { text-align: center; margin-top: 20px; padding: 20px; background: #f9f9f9; }
+        .social-links a { font-size: 30px; margin: 0 15px; color: #555; text-decoration: none; }
+        .fa-facebook { color: #1877f2; }
+        .fa-x-twitter { color: #000; }
+        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        footer { text-align: center; padding: 20px; color: #888; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -112,74 +25,40 @@
     <div class="top-bar">রিপোর্ট ওয়েব</div>
 
     <nav class="navbar">
-        <a href="#" class="logo">REPORT<span>WEB</span></a>
-        <div class="nav-links">
-            <a href="#report">Report</a>
-            <a href="#contact">Contact Us</a>
+        <div style="font-weight: bold; font-size: 20px;">REPORT<span style="color: #007bff;">WEB</span></div>
+        <div>
+            <a href="#" style="text-decoration: none; color: #333; margin-left: 15px;">Home</a>
+            <a href="#" style="text-decoration: none; color: #333; margin-left: 15px;">Report</a>
         </div>
     </nav>
 
     <div class="container">
-        <div class="report-card" id="report">
-            <h2 style="text-align: center; margin-top: 0; color: #007bff;">রিপোর্ট সাবমিট করুন</h2>
-            
-            <form action="https://formspree.io/f/skabirhossen2535@gmail.com" method="POST" enctype="multipart/form-data">
-                
-                <label>আপনার নাম</label>
-                <input type="text" name="Name" placeholder="নাম লিখুন" required>
-
-                <label>ইমেইল অ্যাড্রেস</label>
-                <input type="email" name="Email" placeholder="ইমেইল লিখুন" required>
-
-                <label>রিপোর্টের ধরণ</label>
-                <select name="Category" required>
-                    <option value="">নির্বাচন করুন</option>
-                    <option value="অভিযোগ">অভিযোগ (Complaint)</option>
-                    <option value="পরামর্শ">পরামর্শ (Suggestion)</option>
-                    <option value="অন্যান্য">অন্যান্য</option>
-                </select>
-
-                <label>রিপোর্ট বিস্তারিত</label>
-                <textarea name="Message" rows="5" placeholder="বিস্তারিত লিখুন..." required></textarea>
-
-                <label>ছবি বা ফাইল সংযুক্ত করুন (ঐচ্ছিক)</label>
-                <input type="file" name="Attachment">
-
-                <button type="submit" class="submit-btn">জমা দিন</button>
-            </form><form action="https://formspree.io/f/skabirhossen2535@gmail.com
-" method="POST" enctype="multipart/form-data">
-        </div>
+        <h2 style="text-align: center;">রিপোর্ট সাবমিট করুন</h2>
+        <form action="https://formspree.io/f/আপনার_আইডি" method="POST" enctype="multipart/form-data">
+            <input type="text" name="Name" placeholder="আপনার নাম" required>
+            <input type="email" name="Email" placeholder="ইমেইল" required>
+            <select name="Category">
+                <option value="অভিযোগ">অভিযোগ</option>
+                <option value="পরামর্শ">পরামর্শ</option>
+            </select>
+            <textarea name="Message" rows="4" placeholder="বিস্তারিত লিখুন" required></textarea>
+            <input type="file" name="Attachment">
+            <button type="submit" class="submit-btn">জমা দিন</button>
+        </form>
     </div>
 
-    <section class="contact-section" id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-grid">
-            <div class="contact-box">
-                <i class="fas fa-location-dot" style="font-size: 24px; color: #007bff;"></i>
-                <h4>অবস্থান</h4>
-                <p>ঢাকা, বাংলাদেশ</p>
-            </div>
-            <div class="contact-box">
-                <i class="fas fa-envelope" style="font-size: 24px; color: #007bff;"></i>
-                <h4>ইমেইল</h4>
-                <p>skabirhossen2535@gmail.com</p>
-            </div>
-        </div>
-
-        <div class="social-links">
-            <p>আমাদের সাথে যুক্ত থাকুন:</p>
-            <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-x-twitter"></i></a>
-        </div>
-    </section>
+    <div class="social-links">
+        <p>আমাদের সাথে যুক্ত থাকুন:</p>
+        <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
 
     <a href="https://wa.me/8801700000000" class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <footer>
-        © ২০২৬ রিপোর্ট ওয়েব | সর্বস্বত্ব সংরক্ষিত...... <br>
-        ধন্যবাদ
+        © ২০২৬ রিপোর্ট ওয়েব | ধন্যবাদ
     </footer>
 
 </body>
